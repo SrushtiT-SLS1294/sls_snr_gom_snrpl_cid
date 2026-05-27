@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="SeniorityPtlADM" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.Links" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Collection>
+                    <Record>
+                        <PropertyValue Property="rel" String="author"/>
+                        <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+                    </Record>
+                </Collection>
+            </Annotation>
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="PmkAiwjh99kous85" EntityType="SeniorityPtlADM.PmkAiwjh99kous85"/>
+                <EntitySet Name="vl590nty7hayjsi6" EntityType="SeniorityPtlADM.vl590nty7hayjsi6"/>
+                <EntitySet Name="bbawxi48qxpgkx14" EntityType="SeniorityPtlADM.bbawxi48qxpgkx14"/>
+                <EntitySet Name="t21q21j8pz801vps" EntityType="SeniorityPtlADM.t21q21j8pz801vps"/>
+                <EntitySet Name="ztw2gz29cig5u0za" EntityType="SeniorityPtlADM.ztw2gz29cig5u0za"/>
+                <EntitySet Name="skibobg18le5mb9a" EntityType="SeniorityPtlADM.skibobg18le5mb9a"/>
+                <EntitySet Name="we0y62djnoiwxnqi" EntityType="SeniorityPtlADM.we0y62djnoiwxnqi"/>
+                <EntitySet Name="lihiyy8p4x6i2ntj" EntityType="SeniorityPtlADM.lihiyy8p4x6i2ntj"/>
+                <EntitySet Name="znf5dt9kdi356xex" EntityType="SeniorityPtlADM.znf5dt9kdi356xex"/>
+                <EntitySet Name="qt91qpk8oaj8lxia" EntityType="SeniorityPtlADM.qt91qpk8oaj8lxia"/>
+                <EntitySet Name="w9e7t1t3a509y9hg" EntityType="SeniorityPtlADM.w9e7t1t3a509y9hg"/>
+                <EntitySet Name="jyxo21wxwc9o287x" EntityType="SeniorityPtlADM.jyxo21wxwc9o287x"/>
+                <EntitySet Name="m408ytzowk2vooji" EntityType="SeniorityPtlADM.m408ytzowk2vooji"/>
+                <EntitySet Name="wrculuqob6bcbq75" EntityType="SeniorityPtlADM.wrculuqob6bcbq75"/>
+                <EntitySet Name="z4m2azhdcwinyv3t" EntityType="SeniorityPtlADM.z4m2azhdcwinyv3t"/>
+                <FunctionImport Name="pre19ebbKPmigbtq" ReturnType="Edm.String" m:HttpMethod="POST">
+                    <Parameter Name="D4OXYPALUYAIDNSO" Type="Edm.String" Mode="In" Nullable="true"/>
+                </FunctionImport>
+                <FunctionImport Name="en24uiaxztfyuiol" ReturnType="Edm.String" m:HttpMethod="POST">
+                    <Parameter Name="D4OXYPALUYAIDNSO" Type="Edm.String" Mode="In" Nullable="true"/>
+                </FunctionImport>
+            </EntityContainer>
+            <EntityType Name="PmkAiwjh99kous85">
+                <Key>
+                    <PropertyRef Name="UNQID"/>
+                </Key>
+                <Property Name="UNQID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="LABTY" Type="Edm.String" MaxLength="250"/>
+                <Property Name="LABTX" Type="Edm.String" MaxLength="500"/>
+                <Property Name="LABIM" Type="Edm.Int16"/>
+            </EntityType>
+            <EntityType Name="vl590nty7hayjsi6">
+                <Key>
+                    <PropertyRef Name="CRDEP"/>
+                </Key>
+                <Property Name="CRDEP" Type="Edm.String" MaxLength="100" Nullable="false"/>
+                <Property Name="DEPCD" Type="Edm.String" MaxLength="10"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="bbawxi48qxpgkx14">
+                <Key>
+                    <PropertyRef Name="EMPCL"/>
+                </Key>
+                <Property Name="EMPCL" Type="Edm.String" MaxLength="100" Nullable="false"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="t21q21j8pz801vps">
+                <Key>
+                    <PropertyRef Name="EMPID"/>
+                </Key>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="ztw2gz29cig5u0za">
+                <Key>
+                    <PropertyRef Name="EMPTP"/>
+                </Key>
+                <Property Name="EMPTP" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="skibobg18le5mb9a">
+                <Key>
+                    <PropertyRef Name="EMPID"/>
+                </Key>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="EMPNM" Type="Edm.String" MaxLength="150"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="we0y62djnoiwxnqi">
+                <Key>
+                    <PropertyRef Name="EMPLN"/>
+                </Key>
+                <Property Name="EMPLN" Type="Edm.String" MaxLength="100" Nullable="false"/>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="lihiyy8p4x6i2ntj">
+                <Key>
+                    <PropertyRef Name="JBCLS"/>
+                </Key>
+                <Property Name="JBCLS" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="znf5dt9kdi356xex">
+                <Key>
+                    <PropertyRef Name="EMPID"/>
+                </Key>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="USRID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPNM" Type="Edm.String" MaxLength="150"/>
+                <Property Name="CRDEP" Type="Edm.String" MaxLength="100"/>
+                <Property Name="POSTL" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="qt91qpk8oaj8lxia">
+                <Key>
+                    <PropertyRef Name="AESKY"/>
+                </Key>
+                <Property Name="AESKY" Type="Edm.String" MaxLength="100" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="w9e7t1t3a509y9hg">
+                <Key>
+                    <PropertyRef Name="COLUMN_NAME"/>
+                </Key>
+                <Property Name="COLUMN_NAME" Type="Edm.String" MaxLength="100" Nullable="false"/>
+                <Property Name="DATA_TYPE_NAME" Type="Edm.String" MaxLength="16"/>
+                <Property Name="TABLE_NAME" Type="Edm.String" MaxLength="256"/>
+                <Property Name="MAXNAME" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PLACEHOLDER" Type="Edm.String" MaxLength="200"/>
+                <Property Name="LENGTH" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="jyxo21wxwc9o287x">
+                <Key>
+                    <PropertyRef Name="SNRID"/>
+                </Key>
+                <Property Name="SNRID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="USRID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ISDEL" Type="Edm.String" MaxLength="1"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPFN" Type="Edm.String" MaxLength="50"/>
+                <Property Name="EMPLN" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CRDEP" Type="Edm.String" MaxLength="100"/>
+                <Property Name="DEPCD" Type="Edm.String" MaxLength="10"/>
+                <Property Name="EMPTP" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPCL" Type="Edm.String" MaxLength="100"/>
+                <Property Name="SNRDT" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="OHIRE" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="JBCLS" Type="Edm.String" MaxLength="30"/>
+                <Property Name="TRMDT" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="SNRDTF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="OHIREF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TRMDTF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+                <Property Name="JBCED" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="JBCEDF" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="m408ytzowk2vooji">
+                <Key>
+                    <PropertyRef Name="SNRID"/>
+                </Key>
+                <Property Name="SNRID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="USRID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ISDEL" Type="Edm.String" MaxLength="1"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPFN" Type="Edm.String" MaxLength="50"/>
+                <Property Name="EMPLN" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CRDEP" Type="Edm.String" MaxLength="100"/>
+                <Property Name="DEPCD" Type="Edm.String" MaxLength="10"/>
+                <Property Name="EMPTP" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPCL" Type="Edm.String" MaxLength="100"/>
+                <Property Name="SNRDT" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="OHIRE" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="JBCLS" Type="Edm.String" MaxLength="30"/>
+                <Property Name="TRMDT" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="SNRDTF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="OHIREF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TRMDTF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+                <Property Name="JBCED" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="JBCEDF" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="wrculuqob6bcbq75">
+                <Key>
+                    <PropertyRef Name="SNRID"/>
+                </Key>
+                <Property Name="SNRID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="EMPID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="USRID" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ISDEL" Type="Edm.String" MaxLength="1"/>
+                <Property Name="UNICD" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPFN" Type="Edm.String" MaxLength="50"/>
+                <Property Name="EMPLN" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CRDEP" Type="Edm.String" MaxLength="100"/>
+                <Property Name="DEPCD" Type="Edm.String" MaxLength="10"/>
+                <Property Name="EMPTP" Type="Edm.String" MaxLength="30"/>
+                <Property Name="EMPCL" Type="Edm.String" MaxLength="100"/>
+                <Property Name="SNRDT" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="OHIRE" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="JBCLS" Type="Edm.String" MaxLength="30"/>
+                <Property Name="TRMDT" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="SNRDTF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="OHIREF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TRMDTF" Type="Edm.String" MaxLength="10"/>
+                <Property Name="UNINM" Type="Edm.String" MaxLength="30"/>
+                <Property Name="JBCED" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="JBCEDF" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="z4m2azhdcwinyv3t">
+                <Key>
+                    <PropertyRef Name="IBEW_CNT"/>
+                </Key>
+                <Property Name="IBEW_CNT" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="UNIFOR_CNT" Type="Edm.Int32"/>
+                <Property Name="CUPE_CNT" Type="Edm.Int32"/>
+            </EntityType>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/PmkAiwjh99kous85" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.PmkAiwjh99kous85/UNQID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNQID: Unique label id"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.PmkAiwjh99kous85/LABTY" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="LABTY: Label type"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.PmkAiwjh99kous85/LABTX" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="LABTX: Label text"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.PmkAiwjh99kous85/LABIM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="LABIM: is mandatory"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/vl590nty7hayjsi6" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.vl590nty7hayjsi6/CRDEP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="CRDEP: Current Department"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.vl590nty7hayjsi6/DEPCD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="DEPCD: Department code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.vl590nty7hayjsi6/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.vl590nty7hayjsi6/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/bbawxi48qxpgkx14" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.bbawxi48qxpgkx14/EMPCL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPCL: Employee class"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.bbawxi48qxpgkx14/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.bbawxi48qxpgkx14/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/t21q21j8pz801vps" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.t21q21j8pz801vps/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: Employee Id"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.t21q21j8pz801vps/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.t21q21j8pz801vps/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/ztw2gz29cig5u0za" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.ztw2gz29cig5u0za/EMPTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPTP: Employment Type"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.ztw2gz29cig5u0za/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.ztw2gz29cig5u0za/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/skibobg18le5mb9a" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.skibobg18le5mb9a/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: Employee Id"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.skibobg18le5mb9a/EMPNM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPNM: Employee First Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.skibobg18le5mb9a/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.skibobg18le5mb9a/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/we0y62djnoiwxnqi" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.we0y62djnoiwxnqi/EMPLN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPFN: Employee First Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.we0y62djnoiwxnqi/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: Employee Id"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.we0y62djnoiwxnqi/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.we0y62djnoiwxnqi/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/lihiyy8p4x6i2ntj" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.lihiyy8p4x6i2ntj/JBCLS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCLS: Employee class"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.lihiyy8p4x6i2ntj/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: Union Code"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.lihiyy8p4x6i2ntj/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/znf5dt9kdi356xex" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.znf5dt9kdi356xex/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: Employee Id"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.znf5dt9kdi356xex/USRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="USRID: User id"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.znf5dt9kdi356xex/EMPNM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPNM: Employee Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.znf5dt9kdi356xex/CRDEP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="CRDEP: Current Department"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.znf5dt9kdi356xex/POSTL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="POSTL: Position Title"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/qt91qpk8oaj8lxia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.qt91qpk8oaj8lxia/AESKY" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="AESKY: AES Key"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/w9e7t1t3a509y9hg" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.w9e7t1t3a509y9hg/COLUMN_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="COLUMN_NAME: COLUMN_NAME"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.w9e7t1t3a509y9hg/DATA_TYPE_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="DATA_TYPE_NAME: DATA_TYPE_NAME"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.w9e7t1t3a509y9hg/TABLE_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TABLE_NAME: TABLE_NAME"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.w9e7t1t3a509y9hg/MAXNAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="MAXNAME: MAXNAME"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.w9e7t1t3a509y9hg/PLACEHOLDER" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="PLACEHOLDER: PLACEHOLDER"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.w9e7t1t3a509y9hg/LENGTH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="LENGTH: LENGTH"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/jyxo21wxwc9o287x" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/SNRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRID: SNRID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: EMPID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/USRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="USRID: USRID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/ISDEL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="ISDEL: ISDEL"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: UNICD"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/EMPFN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPFN: EMPFN"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/EMPLN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPLN: EMPLN"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/CRDEP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="CRDEP: CRDEP"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/DEPCD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="DEPCD: DEPCD"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/EMPTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPTP: EMPTP"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/EMPCL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPCL: EMPCL"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/SNRDT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRDT: SNRDT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/OHIRE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="OHIRE: OHIRE"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/JBCLS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCLS: JBCLS"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/TRMDT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TRMDT: TRMDT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/SNRDTF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRDTF: SNRDTF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/OHIREF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="OHIREF: OHIREF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/TRMDTF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TRMDTF: TRMDTF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/JBCED" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCED: Job Class Entry Date"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.jyxo21wxwc9o287x/JBCEDF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCEDF: Job Class Entry Date Formatted"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/m408ytzowk2vooji" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/SNRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRID: SNRID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: EMPID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/USRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="USRID: USRID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/ISDEL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="ISDEL: ISDEL"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: UNICD"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/EMPFN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPFN: EMPFN"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/EMPLN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPLN: EMPLN"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/CRDEP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="CRDEP: CRDEP"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/DEPCD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="DEPCD: DEPCD"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/EMPTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPTP: EMPTP"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/EMPCL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPCL: EMPCL"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/SNRDT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRDT: SNRDT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/OHIRE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="OHIRE: OHIRE"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/JBCLS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCLS: JBCLS"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/TRMDT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TRMDT: TRMDT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/SNRDTF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRDTF: SNRDTF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/OHIREF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="OHIREF: OHIREF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/TRMDTF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TRMDTF: TRMDTF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/JBCED" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCED: Job Class Entry Date"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.m408ytzowk2vooji/JBCEDF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCEDF: Job Class Entry Date Formatted"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/wrculuqob6bcbq75" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/SNRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRID: SNRID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/EMPID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPID: EMPID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/USRID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="USRID: USRID"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/ISDEL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="ISDEL: ISDEL"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/UNICD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNICD: UNICD"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/EMPFN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPFN: EMPFN"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/EMPLN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPLN: EMPLN"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/CRDEP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="CRDEP: CRDEP"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/DEPCD" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="DEPCD: DEPCD"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/EMPTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPTP: EMPTP"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/EMPCL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="EMPCL: EMPCL"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/SNRDT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRDT: SNRDT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/OHIRE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="OHIRE: OHIRE"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/JBCLS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCLS: JBCLS"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/TRMDT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TRMDT: TRMDT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/SNRDTF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="SNRDTF: SNRDTF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/OHIREF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="OHIREF: OHIREF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/TRMDTF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="TRMDTF: TRMDTF"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/UNINM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNINM: Union Name"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/JBCED" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCED: Job Class Entry Date"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.wrculuqob6bcbq75/JBCEDF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="JBCEDF: Job Class Entry Date Formatted"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.EntityContainer/z4m2azhdcwinyv3t" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.z4m2azhdcwinyv3t/IBEW_CNT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="IBEW_CNT: IBEW_CNT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.z4m2azhdcwinyv3t/UNIFOR_CNT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="UNIFOR_CNT: UNIFOR_CNT"/>
+            </Annotations>
+            <Annotations Target="SeniorityPtlADM.z4m2azhdcwinyv3t/CUPE_CNT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="CUPE_CNT: CUPE_CNT"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,182 @@
+{
+  "result": [
+    {
+      "uId": "U101",
+      "personId": "200101",
+      "fname": "Michael",
+      "lname": "Johnson",
+      "department": "Dept 1",
+      "employeetype": "Full-Time",
+      "typeId": "ET01",
+      "totalsenioritytodate": "4.2831",
+      "Seniorityytd": "01-01-1970",
+      "CSTD": "23-03-2022",
+      "UENDT": "23-03-2022",
+      "Estatus": "Active"
+    },
+    {
+      "uId": "U102",
+      "personId": "200102",
+      "fname": "Sarah",
+      "lname": "Williams",
+      "typeId": "ET02",
+      "department": "Dept 2",
+      "employeetype": "Contract",
+      "totalsenioritytodate": "2.1540",
+      "Seniorityytd": "15-06-2021",
+      "CSTD": "10-10-2021",
+      "UENDT": "31-12-2024",
+      "Estatus": "Active"
+    },
+    {
+      "uId": "U103",
+      "personId": "200103",
+      "fname": "James",
+      "lname": "Miller",
+      "department": "Dept 1",
+      "employeetype": "Full-Time",
+      "typeId": "ET01",
+      "totalsenioritytodate": "8.9122",
+      "Seniorityytd": "12-05-2015",
+      "CSTD": "01-01-2016",
+      "UENDT": "31-12-9999",
+      "Estatus": "Active"
+    },
+    {
+      "uId": "U104",
+      "personId": "200104",
+      "fname": "Emily",
+      "lname": "Davis",
+      "department": "Dept 3",
+      "employeetype": "Full-Time",
+      "typeId": "ET01",
+      "totalsenioritytodate": "1.1023",
+      "Seniorityytd": "20-11-2022",
+      "CSTD": "01-01-2023",
+      "UENDT": "31-12-9999",
+      "Estatus": "Inactive"
+    },
+    {
+      "uId": "U105",
+      "personId": "200105",
+      "fname": "Robert",
+      "lname": "Wilson",
+      "department": "Dept 2",
+      "employeetype": "Full-Time",
+      "typeId": "ET01",
+      "totalsenioritytodate": "5.6781",
+      "Seniorityytd": "10-02-2018",
+      "CSTD": "15-03-2018",
+      "UENDT": "31-12-9999",
+      "Estatus": "Active"
+    },
+    {
+      "uId": "U106",
+      "personId": "200106",
+      "fname": "Jessica",
+      "lname": "Brown",
+      "department": "Dept 1",
+      "employeetype": "Intern",
+      "typeId": "ET03",
+      "totalsenioritytodate": "0.5000",
+      "Seniorityytd": "01-09-2023",
+      "CSTD": "01-09-2023",
+      "UENDT": "01-03-2024",
+      "Estatus": "Active"
+    }
+  ],
+
+  "CSD": [
+    { "csdId": "CSD001", "description": "Core Data 1", "createdDate": "01-01-2024" },
+    { "csdId": "CSD002", "description": "Core Data 2", "createdDate": "02-01-2024" },
+    { "csdId": "CSD003", "description": "Core Data 3", "createdDate": "03-01-2024" },
+    { "csdId": "CSD004", "description": "Core Data 4", "createdDate": "04-01-2024" },
+    { "csdId": "CSD005", "description": "Core Data 5", "createdDate": "05-01-2024" },
+    { "csdId": "CSD006", "description": "Core Data 6", "createdDate": "06-01-2024" }
+  ],
+
+  "TSTD": [
+    { "tstdId": "T001", "title": "Training 1", "validFrom": "01-01-2023" },
+    { "tstdId": "T002", "title": "Training 2", "validFrom": "01-02-2023" },
+    { "tstdId": "T003", "title": "Training 3", "validFrom": "01-03-2023" },
+    { "tstdId": "T004", "title": "Training 4", "validFrom": "01-04-2023" },
+    { "tstdId": "T005", "title": "Training 5", "validFrom": "01-05-2023" },
+    { "tstdId": "T006", "title": "Training 6", "validFrom": "01-06-2023" }
+  ],
+
+  "EMPTYP": [
+    { "typeId": "ET01", "typeName": "Full-Time" },
+    { "typeId": "ET02", "typeName": "Contract" },
+    { "typeId": "ET03", "typeName": "Intern" },
+    { "typeId": "ET06", "typeName": "Externel" },
+    { "typeId": "ET04", "typeName": "Temporary" },
+    { "typeId": "ET05", "typeName": "Consultant" }
+   
+    
+  ],
+  
+
+  "EMPID": [
+    { "empId": "200101", "uId": "USLS_101" },
+    { "empId": "200102", "uId": "USLS_102" },
+    { "empId": "200103", "uId": "USLS_103" },
+    { "empId": "200104", "uId": "USLS_104" },
+    { "empId": "200105", "uId": "USLS_105" },
+    { "empId": "200106", "uId": "USLS_106" }
+  ],
+
+  "DPRTMNT": [
+    { "deptId": "D01", "deptName": "Dept 1" },
+    { "deptId": "D02", "deptName": "Dept 2" },
+    { "deptId": "D03", "deptName": "Dept 3" },
+    { "deptId": "D04", "deptName": "Dept 4" },
+    { "deptId": "D05", "deptName": "Dept 5" },
+    { "deptId": "D06", "deptName": "Dept 6" }
+  ],
+
+  "JOBCFN": [
+    { "jobId": "J01", "jobTitle": "Developer" },
+    { "jobId": "J02", "jobTitle": "Tester" },
+    { "jobId": "J03", "jobTitle": "Manager" },
+    { "jobId": "J04", "jobTitle": "HR" },
+    { "jobId": "J05", "jobTitle": "Analyst" },
+    { "jobId": "J06", "jobTitle": "Support" }
+  ],
+
+  "DOH": [
+    { "personId": "200101", "dateOfHire": "23-03-2022" },
+    { "personId": "200102", "dateOfHire": "10-10-2021" },
+    { "personId": "200103", "dateOfHire": "01-01-2016" },
+    { "personId": "200104", "dateOfHire": "01-01-2023" },
+    { "personId": "200105", "dateOfHire": "15-03-2018" },
+    { "personId": "200106", "dateOfHire": "01-09-2023" }
+  ],
+
+  "UEDT": [
+    { "updateId": "U1", "unionentrydt": "01-01-2025" },
+    { "updateId": "U2", "unionentrydt": "02-01-2025" },
+    { "updateId": "U3", "unionentrydt": "03-01-2025" },
+    { "updateId": "U4", "unionentrydt": "04-01-2025" },
+    { "updateId": "U5", "unionentrydt": "05-01-2025" },
+    { "updateId": "U6", "unionentrydt": "06-01-2025" }
+  ],
+
+  "UENDDT": [
+    { "endId": "E1", "UendDate": "31-12-9999" },
+    { "endId": "E2", "UendDate": "31-12-2024" },
+    { "endId": "E3", "UendDate": "31-12-9999" },
+    { "endId": "E4", "UendDate": "31-12-9999" },
+    { "endId": "E5", "UendDate": "31-12-9999" },
+    { "endId": "E6", "UendDate": "01-03-2024" }
+  ],
+
+  "EMPSTATUS": [
+    { "statusId": "S01", "status": "Active" },
+    { "statusId": "S02", "status": "Inactive" },
+    { "statusId": "S03", "status": "On Leave" },
+    { "statusId": "S04", "status": "Resigned" },
+    { "statusId": "S05", "status": "Terminated" },
+    { "statusId": "S06", "status": "Retired" }
+  ]
+
+}

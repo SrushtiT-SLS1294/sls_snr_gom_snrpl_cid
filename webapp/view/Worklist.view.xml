@@ -1,0 +1,274 @@
+<mvc:View controllerName="snrprtl.slssnrgomsnrpl.controller.Worklist"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:f="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:table="sap.ui.table"
+    xmlns:gt="sap.ui.table">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" backgroundDesign="Solid">
+        <content >
+            <HBox id="_SnrHBOX">
+                <GenericTag text="{i18n>gemaemployees}" visible="true" class="sapUiSmallMargin kpiHeight" status="Information" design="StatusIconHidden">
+                    <m:ObjectNumber state="None" number="{objectView>/KPI_DATA/RPLB15}" />
+                </GenericTag>
+            </HBox>
+
+
+            <VBox class="sapUiSmallMargin">
+                <fb:FilterBar id="snrFilterBar" useToolbar="{= !${device>/system/phone}}" filterContainerWidth="15em" showClearOnFB="true" clear="onFilterClear" showFilterConfiguration="true" reset="onReset" search="onFilterSearch">
+                    <fb:filterGroupItems>
+
+                        <!-- First Name -->
+                        <fb:FilterGroupItem name="empNmae" label="{i18n>firstname}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:Input showValueHelp="true" value="{oGlobalModel>/oFilter/EMPFN}"  change="commonComboFunction" valueHelpRequest="onCommonValueHelp">
+
+                                    <customData>
+                                        <core:CustomData key="i18nKey" value="firstname" />
+                                    </customData>
+
+                                </m:Input>
+                            </fb:control>
+                        </fb:FilterGroupItem>
+                         
+                        <!-- Last Name -->
+                        <fb:FilterGroupItem name="last name" label="{i18n>lastname}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:Input showValueHelp="true" value="{oGlobalModel>/oFilter/EMPLN}"  change="commonComboFunction" valueHelpRequest="onCommonValueHelp">
+
+                                    <customData>
+                                        <core:CustomData key="i18nKey" value="lastname" />
+                                    </customData>
+
+                                </m:Input>
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+                        <!-- Department -->
+                         <!-- <fb:FilterGroupItem name="Department" label="{i18n>department}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:ComboBox selectedKey="{oGlobalModel>/oFilter/department}" change="commonComboFunction" items="{path: '/jyxo21wxwc9o287x',sorter:{path:'CRDEP'},templateShareable: true}" value="{oGlobalModel>/oFilter/DPRTMNT}" width="100%">
+                                    <core:Item key="{CRDEP}" text="{CRDEP}" />
+                                </m:ComboBox>
+                            </fb:control>
+                        </fb:FilterGroupItem> -->
+
+                         <!-- Union Entry Date -->
+                        <fb:FilterGroupItem name="Union Entry Date" label="{i18n>unionentrydate}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <DateRangeSelection id="_idUED" displayFormat="MMM dd, yyyy" valueFormat="yyyy-MM-dd" change="commonDateFunction" value="{oGlobalModel>/oFilter/unionentrydt}" />
+                                <!-- <m:DatePicker displayFormat="MMM-dd-yyyy" valueFormat="yyyy-MM-dd" change="handleChange"/> -->
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+                         <!-- Union End Date -->
+                        <fb:FilterGroupItem name="Union End Date" label="{i18n>unionenddate}" groupName="Group1" visibleInFilterBar="true" >
+                            <fb:control>
+                                <DateRangeSelection id="_idUEDT" displayFormat="MMM dd, yyyy" valueFormat="yyyy-MM-dd" change="commonDateFunction" value="{oGlobalModel>/oFilter/UendDate}" />
+                                <!-- <m:DatePicker displayFormat="MMM-dd-yyyy" valueFormat="yyyy-MM-dd" change="handleChange"/> -->
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+                         <!-- Employee Status -->
+                        <!-- <fb:FilterGroupItem name="Employee Status" label="{i18n>employeestatus}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:ComboBox selectedKey="oGlobalModel>/oFilter/EMPST}" items="{path: '/jyxo21wxwc9o287x',sorter:{path:'EMPST'},templateShareable: true}"  change="commonComboFunction" value="{oGlobalModel>/oFilter/EMPST}" width="100%">
+                                    <core:Item key="{EMPID}" text="{EMPST}" />
+
+                                </m:ComboBox>
+
+                            </fb:control>
+                        </fb:FilterGroupItem> -->
+
+                         <!-- Person ID -->
+                        <fb:FilterGroupItem name="empId" label="{i18n>employeenameid}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:Input showValueHelp="true" value="{oGlobalModel>/oFilter/EMPID}" change="commonComboFunction" valueHelpRequest="onCommonValueHelp">
+
+                                    <customData>
+                                        <core:CustomData key="i18nKey" value="employeenameid" />
+                                    </customData>
+
+                                </m:Input>
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+                         <!-- Job Classification -->
+                        <fb:FilterGroupItem name="Job Classification" label="{i18n>jobclassification}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:Input showValueHelp="true" valueHelpRequest="onCommonValueHelp" change="commonComboFunction" value="{oGlobalModel>/oFilter/JBCLS}" >
+                                    <customData>
+                                        <core:CustomData key="i18nKey" value="jobclassification" />
+                                    </customData>
+                                </m:Input>
+
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+
+                         <!-- Employee Type -->
+                        <!-- <fb:FilterGroupItem name="Employee Type" label="{i18n>employeetype}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <m:ComboBox selectedKey="{oGlobalModel>/oFilter/employeetype}" change="commonComboFunction" items="{path: '/ztw2gz29cig5u0za',sorter:{path:'EMPTP'},templateShareable: true}" value="{oGlobalModel>/oFilter/employeetype}" width="100%">
+                                    <core:Item key="{UNICD}" text="{EMPTP}" />
+                                </m:ComboBox>
+                            </fb:control>
+                        </fb:FilterGroupItem> -->
+
+                          <!-- Date of Hire -->
+                        <fb:FilterGroupItem name="Date of Hire" label="{i18n>dateofhire}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <DateRangeSelection id="_idDOHR" displayFormat="MMM dd, yyyy" valueFormat="yyyy-MM-dd" change="commonDateFunction" value="{oGlobalModel>/oFilter/dateOfHire}" />
+                                <!-- <m:DatePicker displayFormat="MMM-dd-yyyy" valueFormat="yyyy-MM-dd" change="handleChange"/> -->
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+
+
+                       
+                       
+                        <fb:FilterGroupItem name="date" label="{i18n>CSD}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <DateRangeSelection  id="_idCSD" value="{oGlobalModel>/oFilter/CSD}" displayFormat="MMM dd, yyyy" valueFormat="MM-dd-yyyy" change="commonDateFunction" />
+                                <!-- <m:DatePicker displayFormat="MMM-dd-yyyy" valueFormat="yyyy-MM-dd" change="handleChange"/> -->
+                            </fb:control>
+                        </fb:FilterGroupItem>
+
+                        <!-- Seniority Date -->
+                        <fb:FilterGroupItem name="Seniority Date" label="{i18n>totalsenioritytodate}" groupName="Group1" visibleInFilterBar="true">
+                            <fb:control>
+                                <DateRangeSelection id="_idSeniority" value="{oGlobalModel>/oFilter/totalsenioritytodate}"  name="true" displayFormat="MMM dd, yyyy" valueFormat="MM-dd-yyyy" change="commonDateFunction" />
+                                <!-- <m:DatePicker displayFormat="MMM-dd-yyyy" valueFormat="yyyy-MM-dd" change="handleChange"/> -->
+                            </fb:control>
+                        </fb:FilterGroupItem>
+                    </fb:filterGroupItems>
+                </fb:FilterBar>
+            </VBox>
+            
+
+
+            <!-- Top Bar -->
+            <!-- <Button text="GEMA" class="btn sapUiSmallMarginBegin" /> -->
+            <SegmentedButton class="sapMSegBFit sapUiSmallMarginBegin" selectedKey="GEMA">
+                <items>
+                    <SegmentedButtonItem text="GEMA" key="GEMA" class="sapMSegBFit" />
+
+                </items>
+            </SegmentedButton>
+            <VBox class="sapUiSmallMargin">
+
+
+                <!-- Table Panel -->
+
+                <gt:Table id="id_Seniority_Table" rows="{/Customers}" width="100%" fixedColumnCount="1" enableColumnFreeze="true" selectionMode="None" threshold="20">
+                    <gt:toolbar>
+                        <Toolbar>
+                            <Title text="{i18n>GEMA}" />
+
+                            <ToolbarSpacer />
+
+                            <Button icon="sap-icon://action-settings" press="openPersoDialog($event,'id_Seniority_Table')" />
+
+                            <Button icon="sap-icon://excel-attachment" text="{i18n>exprtgema}" type="Accept" press="onPress_ExcelExport($event, 'id_Seniority_Table','Seniority Details Excelsheet')" />
+                        </Toolbar>
+                    </gt:toolbar>
+                    <!-- Row Settings -->
+                    <gt:rowSettingsTemplate>
+                        <gt:RowSettings />
+                    </gt:rowSettingsTemplate>
+
+                    <!-- Columns -->
+                    <gt:columns>
+                        <!-- PERSON ID -->
+                        <gt:Column hAlign="Center" autoResizable="true">
+                            <Label text="{i18n>City}" design="Bold" />
+                            <gt:template>
+                                <Link text="{City}" press="_onBtnPress" />
+                            </gt:template>
+                        </gt:Column>
+
+                        <!-- FIRST NAME -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>PostalCode}" design="Bold" />
+                            <gt:template>
+                                <Text text="{PostalCode}" />
+                            </gt:template>
+                        </gt:Column>
+
+                        <!-- LAST NAME -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>ContactName}" design="Bold" />
+                            <gt:template>
+                                <Text text="{ContactName}" />
+                            </gt:template>
+                        </gt:Column>
+
+                        <!-- DEPARTMENT -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>department}" design="Bold" />
+                            <gt:template>
+                                <Text text="{CRDEP}" />
+                            </gt:template>
+                        </gt:Column>
+
+                        <!-- EMPLOYEE TYPE -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>Employeetype}" design="Bold" />
+                            <gt:template>
+                                <Text text="{EMPTP}" />
+                            </gt:template>
+                        </gt:Column>
+
+                         <!-- EMPLOYEE STATUS -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>employeestatus}" design="Bold" />
+                            <gt:template>
+                                <Text text="{EMPST}" />
+                            </gt:template>
+                        </gt:Column>
+
+                         <!-- SENIORITY YTD -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>seniorityytd}" design="Bold" />
+                            <gt:template>
+                                <Text text="{SNYTD}" />
+                            </gt:template>
+                        </gt:Column>
+                        
+
+                        <!-- TOTAL SENIORITY -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>totalsenioritytodate}" design="Bold" />
+                            <gt:template>
+                                <Text text="{worklist>totalsenioritytodate}" />
+                            </gt:template>
+                        </gt:Column>
+
+                       
+
+                        <!-- CSD -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>CSD}" design="Bold" />
+                            <gt:template>
+                                <Text text="{worklist>CSTD}" />
+                            </gt:template>
+                        </gt:Column>
+
+                        <!-- UNION ENTRY DATE -->
+                        <gt:Column hAlign="Center" width="15rem">
+                            <Label text="{i18n>unionentrydate}" design="Bold" />
+                            <gt:template>
+                                <Text text="{worklist>UENDT}" />
+                            </gt:template>
+                        </gt:Column>
+
+                       
+                    </gt:columns>
+                </gt:Table>
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,110 @@
+<core:FragmentDefinition
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:gt="sap.ui.table"
+    xmlns:vm="sap.ui.fl.variants"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+    <VBox
+        id="_id_MngSnr_Container"
+        width="100%"
+    >
+        <l:BlockLayout background="Dashboard">
+            <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                <l:BlockLayoutCell
+                    backgroundColorSet="ColorSet11"
+                    backgroundColorShade="ShadeD"
+                    id="_id_manageSnrCel"
+                    visible="true"
+                >
+                    <!-- <VBox > -->
+                    <f:SimpleForm
+                        layout="ResponsiveGridLayout"
+                        labelSpanXL="4"
+                        labelSpanL="4"
+                        labelSpanM="4"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        editable="true"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false"
+                    >
+                        <f:content>
+                            <Label
+                                text="{i18n>eventreason}"
+                                required="true"
+                                visible="true"
+                                design="Bold"
+                            />
+                            <m:Input
+                                required="true"
+                                value='{oGlobalModel>/oManageSnr/EVNTRS}'
+                                change="onValidateField"
+                                name="true"
+                                visible="true"
+                                editable="true"
+                            >
+                                <layoutData>
+                                    <l:GridData span="XL5 L5 M6 S12" />
+                                </layoutData>
+                            </m:Input>
+                            <Label
+                                text="{i18n>totalsenioritytodate}"
+                                required="true"
+                                visible="true"
+                                design="Bold"
+                            />
+
+                            <m:Input
+                                required="true"
+                                name="true"
+                                value="{
+                                path: 'oGlobalModel>/oManageSnr/SNRTDT'
+                                
+                                 }"
+                                type="Number"
+                                change="onValidateField"
+                                editable="true"
+                            >
+                                <layoutData>
+                                    <l:GridData span="XL5 L5 M6 S12" />
+                                </layoutData>
+                            </m:Input>
+
+                            <Label
+                                text="{i18n>comments}"
+                                required="false"
+                                visible="true"
+                                design="Bold"
+                            />
+                            <m:TextArea
+                                required="true"
+                                value='{oGlobalModel>/oManageSnr/CMMNT}'
+                                change="onValidateField"
+                                name="true"
+                                placeholder="{i18n>charlimit}"
+                                rows="6"
+                                visible="true"
+                                editable="true"
+                            >
+                                <layoutData>
+                                    <l:GridData span="XL5 L5 M6 S12" />
+                                </layoutData>
+                            </m:TextArea>
+                        </f:content>
+                    </f:SimpleForm>
+                    <!-- </VBox> -->
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+        </l:BlockLayout>
+    </VBox>
+</core:FragmentDefinition>

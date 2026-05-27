@@ -1,0 +1,101 @@
+<mvc:View 
+    controllerName="snrprtl.slssnrgomsnrpl.controller.Object"
+xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" 
+xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+    xmlns:fb="sap.ui.comp.filterbar"
+     xmlns:table="sap.ui.table"
+    xmlns:gt="sap.ui.table"
+     xmlns:svm="sap.ui.comp.smartvariants" xmlns:vm="sap.ui.fl.variants">
+
+    <Page id="page_2" title="{i18n>title}" titleAlignment="Center">
+
+        <content>
+
+           <HeaderContainer scrollStep="200" showDividers="false" class="sapUiTinyMargin">
+
+                        <GenericTag text="{i18n>personid}:{oGlobalModel>/KPI_DATA/USRID}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden" />
+
+                        <GenericTag text="{i18n>firstname}:{oGlobalModel>/KPI_DATA/EMPFN}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                           
+
+                        <GenericTag text="{i18n>lastname}:{oGlobalModel>/KPI_DATA/EMPLN}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                            
+                        
+                        
+                        <GenericTag text="{i18n>jurisdiction}:{oGlobalModel>/KPI_DATA/EMPLN}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                            
+
+                         <GenericTag text="{i18n>senioritydate}:{oGlobalModel>/KPI_DATA/JBCEDF}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                            
+
+
+                         <GenericTag text="{i18n>jobclassification}:{oGlobalModel>/KPI_DATA/JBCLS}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                           
+
+                        <GenericTag text="{i18n>Employeetype}:{oGlobalModel>/KPI_DATA/EMPTP}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                          
+
+                        <GenericTag text="{i18n>department}:{oGlobalModel>/KPI_DATA/CRDEP}" class="sapUiTinyMargin kpiHeight myBoldTag " status="Information" design="StatusIconHidden"/>
+                          
+                  </HeaderContainer>
+
+          
+
+        </content>
+        <content>
+          <!-- Tabs -->
+            <IconTabBar
+                id="idIconTabBarMulti"
+                expanded="{device>/isNoPhone}"
+                selectedKey="{objectView>/selectedTab}"
+                select="onSelectIconTabBar"
+                class="sapUiResponsiveContentPadding">
+
+                <items>
+
+                    <IconTabFilter 
+                        icon="sap-icon://history"
+                        text="{i18n>history}"
+                        key="1">
+                        <core:Fragment fragmentName="snrprtl.slssnrgomsnrpl.view.IconTab_Fragment.Frag_HistorySnr" type="XML"/>
+                    </IconTabFilter>                    
+
+
+                    <IconTabFilter 
+                        icon="sap-icon://form"
+                        text="{i18n>manage}"
+                        key="2">
+                        <core:Fragment fragmentName="snrprtl.slssnrgomsnrpl.view.IconTab_Fragment.Frag_ManageSnr" type="XML"/>
+
+                    </IconTabFilter>  
+
+                </items>
+
+            </IconTabBar>
+        </content>
+
+        <!-- Footer -->
+        <footer>
+            <Toolbar>
+
+                <ToolbarSpacer/>
+                <Button 
+                    
+                    type="Accept"
+                    icon="sap-icon://employee-approvals"
+                    text="{i18n>Submit}"
+                    visible="{=${objectView>/selectedTab} === '2' ?  true:false}" 
+                    press="_onPress_Submit($event, 0)" />
+
+                 <Button 
+                    type="Reject"
+                    icon="sap-icon://undo"
+                    text="{i18n>Back}"
+                    press="_onPress_Back"
+                    visible="true"/>
+
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

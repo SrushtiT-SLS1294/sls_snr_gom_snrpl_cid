@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<SelectDialog id="id_JOBClSFCTN" title="{i18n>jobclassification}" titleAlignment="Center"
+		search="onSearchSelectDialoug($event,'id_JOBClSFCTN',['JBCLS'])" confirm="onValueHelpConfirm" contentWidth="25rem"
+		cancel="onCanceid_JOBClSFCTN" items="{path: '/lihiyy8p4x6i2ntj', sorter: [{path: 'JBCLS', descending: false}]}"
+		liveChange="onSearchSelectDialoug($event,'id_JOBClSFCTN',['JBCLS'])">
+		<StandardListItem title="{JBCLS}" description=" " type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

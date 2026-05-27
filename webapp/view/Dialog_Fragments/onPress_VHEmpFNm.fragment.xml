@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<SelectDialog id="id_Fname" title="{i18n>firstname}" titleAlignment="Center"
+		search="onSearchSelectDialoug($event,'id_Fname',['EMPFN'])" confirm="onValueHelpConfirm" contentWidth="25rem"
+		cancel="onCanceid_Fname" items="{path: '/skibobg18le5mb9a', sorter: [{path: 'EMPFN', descending: false}]}"
+		liveChange="onSearchSelectDialoug($event,'id_Fname',['EMPFN'])">
+		<StandardListItem title="{EMPFN}" description=" " type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

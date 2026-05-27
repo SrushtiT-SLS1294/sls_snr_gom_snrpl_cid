@@ -1,0 +1,98 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:gt="sap.ui.table"
+    xmlns:vm="sap.ui.fl.variants"
+>
+    <VBox>
+        <gt:Table
+            id="id_SnrHistory_Table"
+            rows="{objectView>/result}"
+            width="100%"
+            fixedColumnCount="1"
+            enableColumnFreeze="true"
+            selectionMode="None"
+            threshold="20"
+        >
+            <gt:toolbar>
+                <Toolbar>
+                    <Title text="{i18n>GEMA}" />
+
+                    <ToolbarSpacer />
+
+                    <Button
+                        icon="sap-icon://excel-attachment"
+                        text="{i18n>exporthistory}"
+                        type="Accept"
+                        press="onPress_ExcelExport($event, 'id_SnrHistory_Table','Seniority History Excelsheet')"
+                    />
+                </Toolbar>
+            </gt:toolbar>
+            <!-- Row Settings -->
+            <gt:rowSettingsTemplate>
+                <gt:RowSettings />
+            </gt:rowSettingsTemplate>
+
+            <!-- Columns -->
+            <gt:columns>
+                <!-- Effective Date-->
+                <gt:Column
+                    hAlign="Center"
+                    width="auto"
+                >
+                    <Label
+                        text="{i18n>effectivedate}"
+                        design="Bold"
+                    />
+                    <gt:template>
+                        <Text text="{objectView>effectiveDate}"/>
+                    </gt:template>
+                </gt:Column>
+
+                <!-- Event Reason -->
+                <gt:Column
+                    hAlign="Center"
+                    width="auto"
+                >
+                    <Label
+                        text="{i18n>eventreason}"
+                        design="Bold"
+                    />
+                    <gt:template>
+                        <Text text="{objectView>eventReason}" />
+                    </gt:template>
+                </gt:Column>
+
+                <!-- DEPARTMENT -->
+                <gt:Column
+                    hAlign="Center"
+                    width="auto"
+                >
+                    <Label
+                        text="{i18n>senioritytodate}"
+                        design="Bold"
+                    />
+                    <gt:template>
+                        <Text text="{objectView>seniorityToDate}" />
+                    </gt:template>
+                </gt:Column>
+
+                <!-- EMPLOYEE TYPE -->
+                <gt:Column
+                    hAlign="Center"
+                    width="auto"
+                >
+                    <Label
+                        text="{i18n>comments}"
+                        design="Bold"
+                    />
+                    <gt:template>
+                        	<ExpandableText class="sapUiTinyMarginBottom sapUiTinyMarginTop" text="{objectView>comments}" maxCharacters="20" overflowMode="Popover" />
+                        <!-- <Text text="{objectView>comments}" /> -->
+                    </gt:template>
+                </gt:Column>
+
+            </gt:columns>
+        </gt:Table>
+    </VBox>
+</core:FragmentDefinition>

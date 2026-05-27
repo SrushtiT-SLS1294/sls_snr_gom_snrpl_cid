@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Apr 08 2026 10:54:44 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://sodales--sodales-solutions-inc--gm-lp4ewatp-gomdev-poc-2d7e56a4.cfapps.ca10.hana.ondemand.com/odata/v2/seniority-ptl-adm/",
+    "appName": "sls_snr_gom_snrpl",
+    "appTitle": "Seniority Portal",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "snrprtl",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.146.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.22.0",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

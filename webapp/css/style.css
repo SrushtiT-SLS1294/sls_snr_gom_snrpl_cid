@@ -1,0 +1,19 @@
+/* Enter your custom styles here */
+.kpiHeight .sapMGenericTagWrap {
+    height: 2rem;
+    pointer-events: none;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+}
+.noBorderToolbar {
+    border-bottom: none !important;
+}
+ .sapMSegBFit {
+    border-radius: 0.6rem;
+    width: 20%;
+    /*padding:1rem;*/
+}
+.myBoldTag{
+    font-weight: bold;
+} 
+
