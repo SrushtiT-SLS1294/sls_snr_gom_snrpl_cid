@@ -11,11 +11,10 @@ module.exports = function (config) {
 
         // ─── UI5 Configuration ────────────────────────────────────────────────
         ui5: {
+            type: "application",
             mode: "html",           // Use HTML-based test runners
             testpage: "webapp/test/unit/unitTests.qunit.html",  // entry point
-            paths: {
-                "webapp": "webapp"
-            }
+
         },
 
         // ─── Test Files to Watch ─────────────────────────────────────────────
