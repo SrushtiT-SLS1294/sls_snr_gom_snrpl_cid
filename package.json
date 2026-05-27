@@ -17,7 +17,11 @@
     "@sap-ux/ui5-middleware-fe-mockserver": "2",
     "ui5-task-zipper": "^3.4.x",
     "rimraf": "^5.0.5",
-    "mbt": "^1.2.29"
+    "mbt": "^1.2.29",
+    "karma": "^6.4.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-junit-reporter": "^2.0.1",
+    "karma-ui5": "^1.1.0"
   },
   "scripts": {
     "start": "fiori run --open \"test/flp.html#app-preview\"",
@@ -33,7 +37,8 @@
     "unit-test": "fiori run --config ./ui5-mock.yaml --open \"test/unit/unitTests.qunit.html\"",
     "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
     "build:mta": "rimraf resources mta_archives && mbt build",
-    "undeploy": "cf undeploy snrprtlslssnrgomsnrpl --delete-services --delete-service-keys --delete-service-brokers"
+    "undeploy": "cf undeploy snrprtlslssnrgomsnrpl --delete-services --delete-service-keys --delete-service-brokers",
+    "test:ci": "karma start karma.conf.js --single-run --browsers ChromeHeadlessCI"
   },
   "sapuxLayer": "CUSTOMER_BASE"
 }
