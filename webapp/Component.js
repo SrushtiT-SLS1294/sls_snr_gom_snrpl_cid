@@ -42,10 +42,9 @@ sap.ui.define([
 
                     },
                     'oManageSnr':{},
-                    ' KPI_DATA':{ 
-                        'RPLB15':'Test Developer'
-                    }
+                    ' KPI_DATA':56
                 }
+                
             );
             this.setModel(oModel, "oGlobalModel");
             // this.KPI_DATA();
