@@ -1,0 +1,52 @@
+# .pipeline/config.yml
+# SAP Continuous Integration & Delivery Service Pipeline Configuration
+# This tells the SAP CI/CD service to run unit tests during the build stage.
+
+general:
+  buildTool: "npm"
+  productiveBranch: "main"
+
+# ─── Stage Configuration ──────────────────────────────────────────────────────
+stages:
+  # 1. Build Stage – installs dependencies and builds the UI5 app
+  Build:
+    npmRunScripts:
+      - "ci-build"        # maps to: npm run ci-build in package.json
+
+  # 2. Test Stage – runs QUnit unit tests headlessly
+  "Additional Unit Tests":
+    npmRunScripts:
+      - "test:ci"         # maps to: npm run test:ci  → karma single-run
+
+  # 3. Acceptance Tests (OPA5 Integration Tests)
+  "Acceptance Tests":
+    appUrls:
+      - url: "http://localhost:8080/index.html"
+        credentialsId: ""   # leave empty for public apps
+    npmRunScripts:
+      - "test:integration"
+
+  # 4. Malware Scan (recommended for BTP deployments)
+  "Malware Scan":
+    enabled: true
+
+  # 5. Deploy to CF (Cloud Foundry on BTP)
+  "Deploy to Cloud Foundry":
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com/"   # change to your region
+    cfOrg: "a0b47f64trial"
+    cfSpace: "dev"
+    cfCredentialsId: "CF_CREDENTIALS"       # store in CI/CD credentials vault
+    deployTool: "mtaDeployPlugin"           # for MTA-based deployment
+    mtaDeployParameters: "-e config.mtaext"
+
+# ─── Steps Configuration ─────────────────────────────────────────────────────
+steps:
+  karmaExecuteTests:
+    installCommand: "npm ci"
+    runCommand: "npm run test:ci"
+    testResultsPattern: "test-results/TEST-*.xml"   # JUnit XML picked up by SAP CI/CD
+
+  npmExecuteScripts:
+    install: true
+    runScripts:
+      - "test:ci"
