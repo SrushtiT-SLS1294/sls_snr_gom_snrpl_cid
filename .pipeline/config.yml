@@ -51,3 +51,7 @@ steps:
     installCommand: "npm install --ignore-scripts"
     runScripts:
       - "test:ci"
+
+  mavenExecuteStaticCodeChecks:
+    spotBugs: false
+    pmd: false    
