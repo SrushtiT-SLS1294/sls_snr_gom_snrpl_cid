@@ -48,5 +48,6 @@ steps:
 
   npmExecuteScripts:
     install: true
+    installCommand: "npm install --ignore-scripts"
     runScripts:
       - "test:ci"
