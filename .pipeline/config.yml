@@ -48,6 +48,6 @@ steps:
     testResultsPattern: "test-results/TEST-*.xml"   # JUnit XML picked up by SAP CI/CD
 
   npmExecuteScripts:
-    installCommand: "npm install --ignore-scripts"
+    install: "true"
     runScripts:
       - "test:ci"
