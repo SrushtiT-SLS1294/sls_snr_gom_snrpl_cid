@@ -10,7 +10,6 @@ general:
 stages:
   # 1. Build Stage – installs dependencies and builds the UI5 app
   Build:
-    mavenExecuteStaticCodeChecks: false
     npmRunScripts:
       - "ci-build"        # maps to: npm run ci-build in package.json
 
@@ -48,6 +47,6 @@ steps:
     testResultsPattern: "test-results/TEST-*.xml"   # JUnit XML picked up by SAP CI/CD
 
   npmExecuteScripts:
-    install: "true"
+    install: true
     runScripts:
       - "test:ci"
