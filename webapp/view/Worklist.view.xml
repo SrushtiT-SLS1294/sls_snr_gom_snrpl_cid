@@ -11,7 +11,7 @@
         <content >
             <HBox id="_SnrHBOX">
                 <GenericTag text="{i18n>gemaemployees}" visible="true" class="sapUiSmallMargin kpiHeight" status="Information" design="StatusIconHidden">
-                    <m:ObjectNumber state="None" number="{oGlobalModel>/KPI_DATA}" />
+                    <m:ObjectNumber state="None" number="10" />
                 </GenericTag>
             </HBox>
 
